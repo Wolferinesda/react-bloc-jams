@@ -36,14 +36,14 @@ class Album extends Component {
 
   handleSongClick(song) {
     const isSameSong = this.state.currentSong === song;
-    if (this.state.currentSong && isSameSong) {
-      this.pause();
+    if (this.state.isPlaying && isSameSong) {
+      this.pause(song);
     } else {
-      if (!isSameSong) {this.setSong(song);}
-      this.play();
+      if (!isSameSong) { this.setSong(song) }
+      this.play(song);
     }
   }
-
+  
   handlePrevClick(song) {
     const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
     const newIndex = Math.max(0, currentIndex - 1);
