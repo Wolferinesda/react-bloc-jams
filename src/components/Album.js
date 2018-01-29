@@ -122,6 +122,14 @@ class Album extends Component {
     return time ? `${Math.floor(time / 60)}:${Number(time % 60 / 100).toFixed(2).substr(2, 3)}` : '-:--';
   }
 
+  playPause() {
+    if(this.state.isPlaying === true){
+      this.setState({isPlaying: "playing"})
+    } if(this.state.isPlaying === false){
+      this.setState({isPlaying: "paused"})
+    }
+  }
+
   render() {
     return (
       <section className="album">
@@ -139,21 +147,23 @@ class Album extends Component {
             <col id="song-title-column" />
             <col id="song-duration-column" />
           </colgroup>
-          <tbody>
-            {this.state.album.songs.map((song, index ) =>
-              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                <td>
-                  <button>
+          <div id="songlist">
+            <tbody>
+              {this.state.album.songs.map((song, index ) =>
+                <tr className="playing" key={index} onClick={() => this.handleSongClick(song)} >
+                  <td>
+                    <button id="play-pause">
                     <span className="song-number">{index + 1} : </span>
-                    <span className="ion-play"> / </span>
-                    <span className="ion-pause"></span>
-                  </button>
-                </td>
-                <td> {song.title} - </td>
-                <td> {this.formatTime(song.duration)} </td>
-              </tr>
-            )}
-          </tbody>
+                      <span className="ion-play"> / </span>
+                      <span className="ion-pause"></span>
+                    </button>
+                  </td>
+                  <td className="song-title"> {song.title} - </td>
+                  <td className="song-duration"> {this.formatTime(song.duration)} </td>
+                </tr>
+              )}
+            </tbody>
+          </div>
         </table>
         <PlayerBar
           isPlaying={this.state.isPlaying}

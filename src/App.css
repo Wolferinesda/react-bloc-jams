@@ -1,25 +1,388 @@
-.App {
+body{
+  background-image: url("http://www.kinyu-z.net/data/wallpapers/64/924743.jpg");
+}
+
+#links {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  font-size: 36px;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+h1#title {
+  text-align: center;
+  font-size: 48px;
+  text-decoration: underline;
+  color: rgba(209, 36, 36, 1);
 }
 
-.App-intro {
-  font-size: large;
+h1.hero-title{
+  font-size: 48px;
+  text-decoration: underline;
+  text-align: center;
+  color: yellow;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 36px;
+  text-align: center;
+  color: aqua;
+}
+
+p {
+  text-align: center;
+  color: orange;
+}
+
+.player-bar {
+  background: black;
+  bottom: 1;
+  height: 100px;
+  transform:translateX(-29%);
+  width: 250%;
+}
+
+#buttons {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.albumText{
+  text-align: center;
+  color:white;
+}
+
+.imagess {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#buttons button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.5);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#buttons button:hover, #buttons button:focus {
+  outline: none;
+  color: hsla(256, 99%, 33%, 1);
+  text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
+}
+
+#buttons #play-pause {
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 2rem;
+  margin: 0.5rem 1rem 0;
+  transform: translateY(0.3rem);
+}
+
+#buttons #play-pause:hover {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+#play-pause[playState="playing"] .ion-pause {
+  display: block;
+}
+
+#play-pause[playState="playing"] .ion-pause {
+  display: block;
+}
+
+#song-duration{
+  color:white;
+}
+
+#time-control input {
+  float: left;
+  width: calc(100% - 80px);
+}
+
+#time-control {
+  margin: 0.5rem auto;
+  /* max-width: 640px; */
+  width: 50%;
+}
+
+#time-control div,
+#volume-control div {
+  font-size: 0.8rem;
+  color: hsla(0, 0%, 100%, 0.4);
+  width: 35px;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+#volume-control div {
+  font-size: 1.3rem;
+  width: 15px;
+}
+
+#volume-control {
+  transform: translateY(-7%);
+  position: absolute;
+  right: 15rem;
+  width: 10%;
+}
+
+#volume-control input {
+  float: left;
+  width: calc(100% - 40px);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: none;
+  margin-top: 7px;
+}
+input[type=range]:focus {
+  outline: none;
+  box-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(57, 0, 0, 0), 0px 0px 0px rgba(83, 0, 0, 0);
+  background: hsl(282, 35%, 25%);
+  border-radius: 3.4px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+  border: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: hsla(289, 48%, 85%, 0.5);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: hsl(282, 35%, 25%);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 0.8px;
+  cursor: pointer;
+  background: hsl(282, 35%, 25%);
+  border-radius: 3.4px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-moz-range-thumb {
+  border: 0px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: hsla(289, 48%, 85%, 0.5);
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 0.8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(0, 0, 0, 0.4);
+  border: 0.2px solid rgba(1, 1, 1, 0);
+  border-radius: 6.8px;
+  box-shadow: 0px 0px 0px rgba(57, 0, 0, 0), 0px 0px 0px rgba(83, 0, 0, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(0, 0, 0, 0.4);
+  border: 0.2px solid rgba(1, 1, 1, 0);
+  border-radius: 6.8px;
+  box-shadow: 0px 0px 0px rgba(57, 0, 0, 0), 0px 0px 0px rgba(83, 0, 0, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: rgba(102, 103, 101, 0.79);
+  cursor: pointer;
+  height: 0.8px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(0, 0, 0, 0.4);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(13, 13, 13, 0.4);
+}
+
+#song-list {
+  border-collapse: collapse;
+  clear: both;
+  font-weight: 100;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+#song-number-column {
+  width: 40px;
+}
+#song-duration-column {
+  width: 80px;
+}
+
+tr {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 0%, 0.01);
+  transition: all 0.2s ease;
+}
+
+tr:focus {
+  outline: aliceblue;
+}
+
+tr:hover .ion-play,
+tr.playing .ion-pause,
+tr.paused .ion-play {
+  display: block;
+}
+
+tr .ion-play,
+tr .ion-pause,
+tr:hover .song-number,
+tr.playing .ion-play,
+tr.playing .song-number,
+tr.paused .ion-pause,
+tr.paused .song-number {
+  display: none;
+}
+
+tr:hover {
+  background: hsla(0, 0%, 0%, 0.05);
+  cursor: pointer;
+}
+
+tr.playing .ion-pause{
+  background: hsla(0, 0%, 0%, 0.1);
+  display:block;
+}
+
+tr:hover .song-title {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+tr:last-child {
+  border: none;
+}
+
+td {
+  padding: 0.75rem;
+}
+
+tr button {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+tr button:focus {
+  outline: none;
+  text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
+}
+
+tr button:focus .song-number {
+  display: none;
+}
+tr button:focus .ion-play {
+  display: block;
+}
+
+tr.playing button:focus .song-number,
+tr.playing button:focus .ion-play {
+  display: none;
+
+}
+tr.playing button:focus .ion-pause {
+  display: block;
+}
+
+.song-number {
+  color: white;
+}
+
+.song-title {
+  color: orange
+}
+
+.song-duration {
+  color: aqua;
+  text-align: right;
+}
+
+html {
+  font-size: 16px;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-color: white;
+  border-style: dotted;
+  border-width: 3px;
+}
+
+nav img {
+  height: 50px;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 4rem auto 150px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#album-info {
+  overflow: hidden;
+  color: Yellow;
+}
+
+#album-cover-art {
+  float: center;
+  margin-right: 2rem;
+  position: relative;
+  width: 250px;
+  max-width: 33%;
+}
+
+#album-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2.artist {
+  font-weight: 100;
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  opacity: 0.9;
+  color: Yellow;
+  text-align: left;
+}
+
+#release-info {
+  opacity: 0.5;
+  font-size: 0.8rem;
 }
 
 @keyframes App-logo-spin {

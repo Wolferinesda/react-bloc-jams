@@ -39,7 +39,7 @@ class PlayerBar extends Component {
             step = "0.01"
             onChange={this.props.handleVolumeChange}
           />
-          <div className="icon ion-volume-high">}</div>
+          <div className="icon ion-volume-high"></div>
         </section>
       </section>
     );
