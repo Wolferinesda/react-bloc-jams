@@ -122,14 +122,6 @@ class Album extends Component {
     return time ? `${Math.floor(time / 60)}:${Number(time % 60 / 100).toFixed(2).substr(2, 3)}` : '-:--';
   }
 
-  playPause() {
-    if(this.state.isPlaying === true){
-      this.setState({isPlaying: "playing"})
-    } if(this.state.isPlaying === false){
-      this.setState({isPlaying: "paused"})
-    }
-  }
-
   render() {
     return (
       <section className="album">
@@ -142,7 +134,7 @@ class Album extends Component {
           </div>
         </section>
         <table id="song-list">
-          <colgroup>
+          <colgroup className= {this.state.isPlaying ? 'playing': 'paused'}>
             <col id="song-number-column" />
             <col id="song-title-column" />
             <col id="song-duration-column" />
@@ -150,11 +142,11 @@ class Album extends Component {
           <div id="songlist">
             <tbody>
               {this.state.album.songs.map((song, index ) =>
-                <tr className="playing" key={index} onClick={() => this.handleSongClick(song)} >
+                <tr className= {this.state.isPlaying ? 'playing':'paused'} key={index} onClick={() => this.handleSongClick(song)} >
                   <td>
                     <button id="play-pause">
-                    <span className="song-number">{index + 1} : </span>
-                      <span className="ion-play"> / </span>
+                      <span className="song-number">{index + 1} : </span>
+                      <span className="ion-play"> </span>
                       <span className="ion-pause"></span>
                     </button>
                   </td>

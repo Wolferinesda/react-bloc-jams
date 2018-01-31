@@ -81,7 +81,6 @@ p {
   color: hsla(0, 0%, 100%, 0.8);
   font-size: 2rem;
   margin: 0.5rem 1rem 0;
-  transform: translateY(0.3rem);
 }
 
 #buttons #play-pause:hover {
@@ -251,28 +250,19 @@ tr:focus {
 
 tr:hover .ion-play,
 tr.playing .ion-pause,
-tr.paused .ion-play {
+tr:nth-child(0).paused .ion-play,
+td:active .ion-pause {
   display: block;
 }
 
 tr .ion-play,
 tr .ion-pause,
 tr:hover .song-number,
-tr.playing .ion-play,
+td.playing .ion-play,
 tr.playing .song-number,
-tr.paused .ion-pause,
-tr.paused .song-number {
+
+td.paused .song-number {
   display: none;
-}
-
-tr:hover {
-  background: hsla(0, 0%, 0%, 0.05);
-  cursor: pointer;
-}
-
-tr.playing .ion-pause{
-  background: hsla(0, 0%, 0%, 0.1);
-  display:block;
 }
 
 tr:hover .song-title {
