@@ -139,22 +139,21 @@ class Album extends Component {
             <col id="song-title-column" />
             <col id="song-duration-column" />
           </colgroup>
-          <div id="songlist">
-            <tbody>
-              {this.state.album.songs.map((song, index ) =>
-<tr className= {this.state.isPlaying && this.state.currentSong === song ? 'playing':'paused'} key={index} onClick={() => this.handleSongClick(song)} >                  <td>
-                    <button id="play-pause">
-                      <span className="song-number">{index + 1} : </span>
-                      <span className="ion-play"> </span>
-                      <span className="ion-pause"></span>
-                    </button>
-                  </td>
-                  <td className="song-title"> {song.title} - </td>
-                  <td className="song-duration"> {this.formatTime(song.duration)} </td>
-                </tr>
-              )}
-            </tbody>
-          </div>
+          <tbody>
+            {this.state.album.songs.map((song, index ) =>
+              <tr className= {this.state.isPlaying && this.state.currentSong === song ? 'playing':'paused'} key={index} onClick={() => this.handleSongClick(song)} >
+                <td>
+                  <button id="play-pause">
+                    <span className="song-number">{index + 1} : </span>
+                    <span className="ion-play"> </span>
+                    <span className="ion-pause"></span>
+                  </button>
+                </td>
+                <td className="song-title"> {song.title} - </td>
+                <td className="song-duration"> {this.formatTime(song.duration)} </td>
+              </tr>
+            )}
+          </tbody>
         </table>
         <PlayerBar
           isPlaying={this.state.isPlaying}
