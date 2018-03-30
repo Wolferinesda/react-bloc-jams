@@ -12,8 +12,8 @@ class App extends Component {
       <header>
       <nav>
         <div id="links">
-        <Link to='/'>• Landing  </Link> {'\u00A0'} {'\u00A0'}
-        <Link to='/library'>   • Library   </Link>
+        <Link to='/'> Landing  </Link> {'\u00A0'} {'\u00A0'}
+        <Link to='/library'>   Library   </Link>
         </div>
       </nav>
         <h1 id="title"> ♪ v( ^-^)/ ♪ Bloc Jams ♪ \(^-^ )v ♪ </h1>

@@ -2,10 +2,12 @@ body{
   background-image: url("http://www.kinyu-z.net/data/wallpapers/64/924743.jpg");
 }
 
+a:link,
 #links {
   text-align: center;
   font-size: 36px;
   color: white;
+  text-decoration: none;
 }
 
 h1#title {
@@ -260,7 +262,7 @@ tr .ion-pause,
 tr:hover .song-number,
 td.playing .ion-play,
 tr.playing .song-number,
-
+tr.playing .ion-play,
 td.paused .song-number {
   display: none;
 }
