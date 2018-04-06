@@ -126,10 +126,11 @@ class Album extends Component {
     return (
       <section className="album">
         <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} />
+          <img id="album-cover-art" src={this.state.album.albumCover} alt="Album Cover" />
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
+            <br />
             <div id="release-info">{this.state.album.releaseInfo} {this.state.album.label} </div>
           </div>
         </section>
@@ -141,8 +142,8 @@ class Album extends Component {
           </colgroup>
           <tbody>
             {this.state.album.songs.map((song, index ) =>
-              <tr className= {this.state.isPlaying && this.state.currentSong === song ? 'playing':'paused'} key={index} onClick={() => this.handleSongClick(song)} >
-                <td>
+              <tr className= {this.state.isPlaying && this.state.currentSong === song ? 'playing':'paused'} key={index}  >
+                <td onClick={() => this.handleSongClick(song)}>
                   <button id="play-pause">
                     <span className="song-number">{index + 1} : </span>
                     <span className="ion-play"> </span>
@@ -154,7 +155,7 @@ class Album extends Component {
               </tr>
             )}
           </tbody>
-        </table>
+          </table>
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}

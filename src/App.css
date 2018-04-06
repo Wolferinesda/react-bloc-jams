@@ -17,6 +17,14 @@ h1#title {
   color: rgba(209, 36, 36, 1);
 }
 
+.point {
+      font-family: Cursive;
+}
+
+.volume-picture {
+  text-align: right;
+}
+
 h1.hero-title{
   font-size: 48px;
   text-decoration: underline;
@@ -29,6 +37,7 @@ h2 {
   font-size: 36px;
   text-align: center;
   color: aqua;
+  line-height: 1px;
 }
 
 p {
@@ -44,6 +53,20 @@ p {
   width: 250%;
 }
 
+.footer{
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.landing{
+  max-height: 150px;
+}
+
+section .library{
+  max-height: 150px;
+}
+
 #buttons {
   width: 300px;
   margin: auto;
@@ -53,7 +76,8 @@ p {
 
 .albumText{
   text-align: center;
-  color:white;
+  color:blue;
+  font-family: fantasy;
 }
 
 .imagess {
@@ -87,14 +111,6 @@ p {
 
 #buttons #play-pause:hover {
   color: hsla(0, 0%, 100%, 1);
-}
-
-#play-pause[playState="playing"] .ion-pause {
-  display: block;
-}
-
-#play-pause[playState="playing"] .ion-pause {
-  display: block;
 }
 
 #song-duration{
@@ -295,6 +311,7 @@ tr button:focus {
 tr button:focus .song-number {
   display: none;
 }
+
 tr button:focus .ion-play {
   display: block;
 }

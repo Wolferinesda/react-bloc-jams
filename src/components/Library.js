@@ -19,7 +19,6 @@ class Library extends Component {
               <div className= "albumText">{album.artist}</div>
               <div className= "albumText">{album.songs.length} songs</div>
               <br />
-              <br />
             </Link>
           )
         }
