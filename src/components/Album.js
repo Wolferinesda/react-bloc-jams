@@ -123,6 +123,8 @@ class Album extends Component {
   }
 
   render() {
+    console.log(this.state)
+
     return (
       <section className="album">
         <section id="album-info">

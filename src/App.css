@@ -109,7 +109,7 @@ section .library{
   margin: 0.5rem 1rem 0;
 }
 
-#buttons #play-pause:hover {
+#buttons #play-pause:hover .ion-play {
   color: hsla(0, 0%, 100%, 1);
 }
 
@@ -268,6 +268,7 @@ tr:focus {
 
 tr:hover .ion-play,
 tr.playing .ion-pause,
+span.paused .ion-play,
 tr:nth-child(0).paused .ion-play,
 td:active .ion-pause {
   display: block;

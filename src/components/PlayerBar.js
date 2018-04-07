@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component}   from 'react';
 
 class PlayerBar extends Component {
   render() {
+    console.log(this.state)
+
     return (
       <section className= "player-bar">
         <section id="buttons">
