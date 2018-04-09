@@ -268,11 +268,11 @@ tr:focus {
 
 tr:hover .ion-play,
 tr.playing .ion-pause,
-span.paused .ion-play,
 tr:nth-child(0).paused .ion-play,
 td:active .ion-pause {
   display: block;
 }
+
 
 tr .ion-play,
 tr .ion-pause,
